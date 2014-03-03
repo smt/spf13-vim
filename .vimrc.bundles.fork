@@ -1,0 +1,39 @@
+" Modeline and Notes {
+" vim: set sw=4 ts=4 sts=4 et tw=78 foldmarker={,} foldlevel=0 foldmethod=marker spell:
+"
+"   This is the personal .vimrc file of Stephen Tudor.
+"   It extends and customizes the .vimrc provided by spf13.
+"
+"   For more information on how this type of Vim configuration works: http://spf13.com
+" }
+
+" General {
+    Bundle 'tpope/vim-unimpaired'
+" }
+
+" Formatting {
+    Bundle 'editorconfig/editorconfig-vim'
+    Bundle 'tpope/vim-sleuth'
+" }
+
+" UI/colors {
+    UnBundle 'flazz/vim-colorschemes'
+    UnBundle 'nathanaelkane/vim-indent-guides'
+    Bundle 'chriskempson/base16-vim'
+    Bundle 'gmist/vim-palette'
+" }
+
+" JavaScript {
+    UnBundle 'briancollins/vim-jst'
+" }
+
+" HTML {
+    Bundle 'tpope/vim-liquid'
+    Bundle 'wavded/vim-stylus'
+" }
+
+" Misc {
+    UnBundle 'tpope/vim-cucumber'
+    UnBundle 'quentindecock/vim-cucumber-align-pipes'
+    UnBundle 'Puppet-Syntax-Highlighting'
+" }
