@@ -142,7 +142,7 @@ create_symlinks() {
 setup_vundle() {
     system_shell="$SHELL"
     export SHELL='/bin/sh'
-    vim -u "$HOME/.vimrc.bundles" +BundleInstall! +BundleClean +qall
+    vim +BundleInstall! +BundleClean +qall
     export SHELL="$system_shell"
 
     success "$1"
