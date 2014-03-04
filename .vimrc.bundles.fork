@@ -11,6 +11,12 @@
     Bundle 'tpope/vim-unimpaired'
 " }
 
+" Programming {
+
+    Bundle 'joonty/vdebug'
+
+" }
+
 " Formatting {
     Bundle 'editorconfig/editorconfig-vim'
     Bundle 'tpope/vim-sleuth'
