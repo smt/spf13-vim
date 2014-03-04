@@ -25,6 +25,8 @@
 
 " JavaScript {
     UnBundle 'briancollins/vim-jst'
+    Bundle 'maksimr/vim-jsbeautify'
+    Bundle 'einars/js-beautify'
 " }
 
 " HTML {
