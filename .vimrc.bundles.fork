@@ -13,6 +13,7 @@
 
 " Programming {
 
+    UnBundle 'majutsushi/tagbar'
     Bundle 'joonty/vdebug'
 
 " }
