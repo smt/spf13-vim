@@ -36,4 +36,7 @@
     UnBundle 'tpope/vim-cucumber'
     UnBundle 'quentindecock/vim-cucumber-align-pipes'
     UnBundle 'Puppet-Syntax-Highlighting'
+    " Dash.app integration
+    Bundle 'rizzatti/funcoo.vim'
+    Bundle 'rizzatti/dash.vim'
 " }
