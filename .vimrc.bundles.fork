@@ -9,6 +9,7 @@
 
 " General {
     Bundle 'tpope/vim-unimpaired'
+    Bundle 'tpope/vim-repeat'
 " }
 
 " Programming {
