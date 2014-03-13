@@ -50,4 +50,6 @@
     " Dash.app integration
     Bundle 'rizzatti/funcoo.vim'
     Bundle 'rizzatti/dash.vim'
+    " ack.vim currently broken, remove for now
+    UnBundle 'mileszs/ack.vim'
 " }
