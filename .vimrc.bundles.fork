@@ -46,6 +46,7 @@
     UnBundle 'tpope/vim-cucumber'
     UnBundle 'quentindecock/vim-cucumber-align-pipes'
     UnBundle 'Puppet-Syntax-Highlighting'
+    Bundle 'freitass/todo.txt-vim'
     " Dash.app integration
     Bundle 'rizzatti/funcoo.vim'
     Bundle 'rizzatti/dash.vim'
