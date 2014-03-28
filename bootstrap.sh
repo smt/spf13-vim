@@ -142,7 +142,13 @@ create_symlinks() {
 setup_vundle() {
     system_shell="$SHELL"
     export SHELL='/bin/sh'
-    vim +BundleInstall! +BundleClean +qall
+    
+    vim \
+        "+set nomore" \
+        +BundleInstall! \
+        +BundleClean \
+        +qall
+    
     export SHELL="$system_shell"
 
     success "$1"
