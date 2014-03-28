@@ -14,15 +14,22 @@
 " }
 
 " General {
+    UnBundle 'kien/ctrlp.vim'
+    UnBundle 'Lokaltog/vim-easymotion'
+    UnBundle 'bling/vim-bufferline'
+    UnBundle 'scrooloose/nerdtree'
+    UnBundle 'jistr/vim-nerdtree-tabs'
     Bundle 'tpope/vim-unimpaired'
     Bundle 'tpope/vim-repeat'
+    Bundle 'Shougo/vimproc.vim'
+    Bundle 'Shougo/unite.vim'
+    Bundle 'Shougo/unite-outline'
+    Bundle 'Shougo/unite-help'
 " }
 
 " Programming {
-
     UnBundle 'majutsushi/tagbar'
     Bundle 'joonty/vdebug'
-
 " }
 
 " Formatting {
@@ -39,6 +46,7 @@
 
 " JavaScript {
     UnBundle 'briancollins/vim-jst'
+    UnBundle 'groenewege/vim-less'
     Bundle 'maksimr/vim-jsbeautify'
     Bundle 'einars/js-beautify'
 " }
