@@ -22,7 +22,8 @@
 
 " Vim UI {
 
-    color badwolf                   " Load a colorscheme
+    set background=light
+    color solarized                 " Load a colorscheme
 
     set nolazyredraw                " Don't redraw while executing macros
     set complete-=i                 " Don't scan current and included files for keywords

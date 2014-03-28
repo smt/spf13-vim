@@ -7,6 +7,12 @@
 "   For more information on how this type of Vim configuration works: http://spf13.com
 " }
 
+" Environment {
+    " Basics {
+        set background=light    " Assume a light background
+    " }
+" }
+
 " General {
     Bundle 'tpope/vim-unimpaired'
     Bundle 'tpope/vim-repeat'
