@@ -9,6 +9,7 @@
 
 " General {
 
+    set shell=/bin/bash
     set fileformats+=mac            " Add mac to fileformats
     set isk+=_,$,@,%,#,-            " None word dividers
     " set viminfo='1000,f1,:100,@100,/20
@@ -22,8 +23,8 @@
 
 " Vim UI {
 
-    set background=light
-    color solarized                 " Load a colorscheme
+    " set background=light
+    color base16-default            " Load a colorscheme
 
     set nolazyredraw                " Don't redraw while executing macros
     set complete-=i                 " Don't scan current and included files for keywords
@@ -87,6 +88,11 @@
 
         "" JSP
         au BufNewFile,BufRead *.jspf setlocal ft=jsp                " Syntax highlighting for JSPF files
+
+        "" Swig
+        au BufNewFile,BufRead *.swig                                " Syntax highlighting for Swig templates
+            \ let b:liquid_subtype = 'html' |
+            \ setlocal ft=liquid |
 
         "" Python
         highlight OverLength ctermbg=red ctermfg=white guibg=#592929
@@ -186,16 +192,11 @@
 
     " }
 
-    " NERDCommenter {
-
-        let NERDSpaceDelims = 1
-        map <leader>/ <plug>NERDCommenterToggle
-
-    " }
-
     " Syntastic {
 
-        let g:syntastic_mode_map = { 'mode': 'passive',
+        let g:syntastic_ignore_files = ['\m\c^\.vimrc', '\m\c\.vim$']
+
+        let g:syntastic_mode_map = { 'mode': 'active',
                                    \ 'active_filetypes': ['php', 'javascript'],
                                    \ 'passive_filetypes': ['less', 'sass', 'scss', 'css', 'html', 'ruby'] }
 
@@ -206,7 +207,7 @@
         let g:syntastic_auto_jump = 0
 
         "show the error list automatically
-        let g:syntastic_auto_loc_list = 1
+        let g:syntastic_auto_loc_list = 0
 
         "don't care about warnings
         let g:syntastic_quiet_messages = { 'level': 'warnings' }
@@ -223,11 +224,15 @@
 
     " Unite {
 
-        " let g:unite_force_overwrite_statusline = 0
+        let g:unite_force_overwrite_statusline = 0
         let g:unite_source_history_yank_enable = 1
         let g:unite_source_grep_command = 'ag'
         let g:unite_source_grep_recursive_opt = ''
         let g:unite_source_grep_default_opts = '--nocolor --nogroup --column'
+
+        " Recursive file ignore pattern
+        call unite#custom#source('file_rec', 'ignore_pattern', 'node_modules')
+
         " Dvorak
         let g:unite_quick_match_table =
             \ get(g:, 'unite_quick_match_table', {
@@ -237,18 +242,18 @@
             \ })
 
         nnoremap <silent> <space>u :<C-u>Unite<cr>
-        nnoremap <silent> <space>t :<C-u>Unite -start-insert file_rec/async:!<cr>
-        nnoremap <silent> <space>f :<C-u>Unite -start-insert file<cr>
-        nnoremap <silent> <space>r :<C-u>Unite -start-insert file_mru<cr>
-        nnoremap <silent> <space>b :<C-u>Unite -start-insert buffer<cr>
-        nnoremap <silent> <space>o :<C-u>Unite -start-insert outline<cr>
-        nnoremap <silent> <space>h :<C-u>Unite -start-insert help<cr>
-        nnoremap <silent> <space>m :<C-u>Unite -start-insert bookmark<cr>
-        nnoremap <silent> <space>s :<C-u>Unite -buffer-name=files -no-split
+        nnoremap <silent> <space>d :<C-u>UniteWithProjectDir -buffer-name=directory -no-split -start-insert directory<cr>
+        nnoremap <silent> <space>t :<C-u>UniteWithProjectDir -buffer-name=file_rec  -no-split -start-insert file_rec/async:!<cr>
+        nnoremap <silent> <space>f :<C-u>Unite               -buffer-name=file      -no-split -start-insert file<cr>
+        nnoremap <silent> <space>r :<C-u>Unite               -buffer-name=mru       -no-split -start-insert file_mru<cr>
+        nnoremap <silent> <space>b :<C-u>Unite               -buffer-name=buffer    -no-split -start-insert buffer<cr>
+        nnoremap <silent> <space>o :<C-u>Unite               -buffer-name=outline   -no-split -start-insert outline<cr>
+        nnoremap <silent> <space>h :<C-u>Unite               -buffer-name=help      -no-split -start-insert help<cr>
+        nnoremap <silent> <space>m :<C-u>Unite               -buffer-name=bookmark  -no-split -start-insert bookmark<cr>
+        nnoremap <silent> <space>s :<C-u>Unite               -buffer-name=files     -no-split
             \ jump_point file_point buffer_tab file_rec:! file file/new<cr>
         nnoremap <silent> <space>M :<C-u>UniteBookmarkAdd<cr>
         nnoremap <silent> <space>y :<C-u>Unite history/yank<cr>
-        nnoremap <silent> <space>d :<C-u>UniteWithProjectDir -start-insert directory<cr>
         nnoremap <silent> <space>/ :<C-u>Unite               grep:.<cr>
         nnoremap <silent> <space>g :<C-u>UniteWithCursorWord grep:.<cr>
 
