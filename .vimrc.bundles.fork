@@ -21,6 +21,7 @@
     " UnBundle 'jistr/vim-nerdtree-tabs'
     Bundle 'tpope/vim-unimpaired'
     Bundle 'tpope/vim-repeat'
+    UnBundle 'Shougo/vimproc'
     Bundle 'Shougo/vimproc.vim'
     Bundle 'Shougo/unite.vim'
     Bundle 'Shougo/unite-outline'
