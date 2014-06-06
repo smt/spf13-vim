@@ -634,9 +634,9 @@
             autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
             " Haskell post write lint and check with ghcmod
-            " $ `cabal install ghcmod` if missing and ensure
+            " $ `cabal install ghc-mod` if missing and ensure
             " ~/.cabal/bin is in your $PATH.
-            if !executable("ghcmod")
+            if !executable("ghc-mod")
                 autocmd BufWritePost *.hs GhcModCheckAndLintAsync
             endif
 
@@ -914,9 +914,9 @@
 
     " FIXME: Isn't this for Syntastic to handle?
     " Haskell post write lint and check with ghcmod
-    " $ `cabal install ghcmod` if missing and ensure
+    " $ `cabal install ghc-mod` if missing and ensure
     " ~/.cabal/bin is in your $PATH.
-    if !executable("ghcmod")
+    if !executable("ghc-mod")
         autocmd BufWritePost *.hs GhcModCheckAndLintAsync
     endif
 
