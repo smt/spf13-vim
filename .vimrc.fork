@@ -23,7 +23,7 @@
 
 " Vim UI {
 
-    " set background=light
+    " set background=dark
     color base16-default            " Load a colorscheme
 
     set nolazyredraw                " Don't redraw while executing macros
@@ -128,8 +128,7 @@
     noremap <up> gk
 
     " Remap <f1> to <esc> to accommodate my fat-fingering ways
-    imap <f1> <esc>
-    vmap <f1> <esc>
+    noremap <f1> <esc>
 
     " Do not attempt to display manual
     nnoremap K <nop>
