@@ -17,8 +17,6 @@
     UnBundle 'kien/ctrlp.vim'
     UnBundle 'Lokaltog/vim-easymotion'
     UnBundle 'bling/vim-bufferline'
-    " UnBundle 'scrooloose/nerdtree'
-    " UnBundle 'jistr/vim-nerdtree-tabs'
     Bundle 'tpope/vim-unimpaired'
     Bundle 'tpope/vim-repeat'
     UnBundle 'Shougo/vimproc'

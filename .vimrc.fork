@@ -182,15 +182,6 @@
 
     " }
 
-    " NERDTree {
-
-        " Unmap the NerdTree
-        silent! unmap <C-e>
-        silent! unmap <leader>e
-        silent! nunmap <leader>nt
-
-    " }
-
     " Syntastic {
 
         let g:syntastic_ignore_files = ['\m\c^\.vimrc', '\m\c\.vim$']
