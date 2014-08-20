@@ -14,64 +14,57 @@
 " }
 
 " General {
-    UnBundle 'kien/ctrlp.vim'
-    UnBundle 'tacahiroy/ctrlp-funky'
-    UnBundle 'Lokaltog/vim-easymotion'
-    UnBundle 'bling/vim-bufferline'
-    Bundle 'tpope/vim-unimpaired'
-    Bundle 'tpope/vim-repeat'
-    UnBundle 'Shougo/vimproc'
-    Bundle 'Shougo/vimproc.vim'
-    Bundle 'Shougo/unite.vim'
-    Bundle 'Shougo/unite-outline'
-    Bundle 'Shougo/unite-help'
+    if count(g:spf13_bundle_groups, 'general')
+        UnBundle 'kien/ctrlp.vim'
+        UnBundle 'tacahiroy/ctrlp-funky'
+        UnBundle 'Lokaltog/vim-easymotion'
+        UnBundle 'flazz/vim-colorschemes'
+        UnBundle 'nathanaelkane/vim-indent-guides'
+        Bundle 'chriskempson/base16-vim'
+        Bundle 'gmist/vim-palette'
+        Bundle 'tpope/vim-unimpaired'
+        Bundle 'Shougo/unite.vim'
+        Bundle 'Shougo/unite-outline'
+        Bundle 'Shougo/unite-help'
+    endif
 " }
 
-" Programming {
-    UnBundle 'majutsushi/tagbar'
-    UnBundle 'scrooloose/nerdcommenter'
-    Bundle 'tpope/vim-commentary'
-    Bundle 'mattn/emmet-vim'
-    " Bundle 'joonty/vdebug'
-" }
-
-" Formatting {
-    Bundle 'editorconfig/editorconfig-vim'
-    Bundle 'tpope/vim-sleuth'
-" }
-
-" UI/colors {
-    UnBundle 'flazz/vim-colorschemes'
-    UnBundle 'nathanaelkane/vim-indent-guides'
-    Bundle 'chriskempson/base16-vim'
-    Bundle 'gmist/vim-palette'
+" General Programming {
+    if count(g:spf13_bundle_groups, 'programming')
+        Bundle 'editorconfig/editorconfig-vim'
+        Bundle 'tpope/vim-sleuth'
+        Bundle 'joonty/vdebug'
+    endif
 " }
 
 " JavaScript {
-    UnBundle 'briancollins/vim-jst'
-    " UnBundle 'groenewege/vim-less'
-    " Bundle 'maksimr/vim-jsbeautify'
-    " Bundle 'einars/js-beautify'
+    if count(g:spf13_bundle_groups, 'javascript')
+        UnBundle 'briancollins/vim-jst'
+    endif
 " }
 
 " HTML {
-    UnBundle 'hail2u/vim-css3-syntax'
-    UnBundle 'gorodinskiy/vim-coloresque'
-    Bundle 'tpope/vim-liquid'
-    Bundle 'wavded/vim-stylus'
+    if count(g:spf13_bundle_groups, 'html')
+        UnBundle 'hail2u/vim-css3-syntax'
+        UnBundle 'gorodinskiy/vim-coloresque'
+        Bundle 'mattn/emmet-vim'
+        Bundle 'tpope/vim-liquid'
+        Bundle 'wavded/vim-stylus'
+    endif
 " }
 
 " Clojure {
-    Bundle 'guns/vim-clojure-static'
-    Bundle 'tpope/vim-leiningen'
-    Bundle 'tpope/vim-projectionist'
-    Bundle 'tpope/vim-dispatch'
-    Bundle 'tpope/vim-fireplace'
+    if count(g:spf13_bundle_groups, 'clojure')
+        Bundle 'guns/vim-clojure-static'
+        Bundle 'tpope/vim-leiningen'
+        Bundle 'tpope/vim-projectionist'
+        Bundle 'tpope/vim-dispatch'
+        Bundle 'tpope/vim-fireplace'
+    endif
 " }
 
 " Misc {
-    Bundle 'freitass/todo.txt-vim'
-    Bundle 'wting/rust.vim'
-    " ack.vim currently broken, remove for now
-    UnBundle 'mileszs/ack.vim'
+    if count(g:spf13_bundle_groups, 'misc')
+        Bundle 'freitass/todo.txt-vim'
+    endif
 " }
