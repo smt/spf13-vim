@@ -15,6 +15,7 @@
 
 " General {
     UnBundle 'kien/ctrlp.vim'
+    UnBundle 'tacahiroy/ctrlp-funky'
     UnBundle 'Lokaltog/vim-easymotion'
     UnBundle 'bling/vim-bufferline'
     Bundle 'tpope/vim-unimpaired'
@@ -30,6 +31,7 @@
     UnBundle 'majutsushi/tagbar'
     UnBundle 'scrooloose/nerdcommenter'
     Bundle 'tpope/vim-commentary'
+    Bundle 'mattn/emmet-vim'
     " Bundle 'joonty/vdebug'
 " }
 
@@ -69,6 +71,7 @@
 
 " Misc {
     Bundle 'freitass/todo.txt-vim'
+    Bundle 'wting/rust.vim'
     " ack.vim currently broken, remove for now
     UnBundle 'mileszs/ack.vim'
 " }
