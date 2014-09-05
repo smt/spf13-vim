@@ -15,6 +15,7 @@
 
 " General {
     if count(g:spf13_bundle_groups, 'general')
+        UnBundle 'bling/vim-bufferline'
         UnBundle 'kien/ctrlp.vim'
         UnBundle 'tacahiroy/ctrlp-funky'
         UnBundle 'Lokaltog/vim-easymotion'
@@ -23,6 +24,7 @@
         Bundle 'chriskempson/base16-vim'
         Bundle 'gmist/vim-palette'
         Bundle 'tpope/vim-unimpaired'
+        Bundle 'Shougo/vimproc'
         Bundle 'Shougo/unite.vim'
         Bundle 'Shougo/unite-outline'
         Bundle 'Shougo/unite-help'
